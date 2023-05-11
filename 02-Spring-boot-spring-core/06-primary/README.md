@@ -1,0 +1,2 @@
+- If you use @Primary then you have to not use @Qualifiers in controller
+- If you use both annotation (@Qualifier & @Primary) then @Qualifier is considered because it has highest proriy
