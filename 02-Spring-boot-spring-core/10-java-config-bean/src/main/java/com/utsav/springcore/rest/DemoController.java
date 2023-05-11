@@ -13,6 +13,7 @@ public class DemoController {
 
     // Specify the bean id: baseballCoach (Same name as class, first character lower-case)
     // Here SwimCoach did not have @Component Instead, we configured as a Spring bean using @Bean in config/SportConfig
+    // If you give any custom Bean id then write that custom Bean Id in Qualifier.
     @Autowired
     public DemoController(@Qualifier("swimCoach") Coach theCoach){
         System.out.println("In constructor: "+getClass().getSimpleName());
