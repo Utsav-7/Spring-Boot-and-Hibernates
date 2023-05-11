@@ -10,6 +10,7 @@ public class SportConfig {
 
     // Here we manually handling construction of given coach
     // The bean Id defaults to the method name with first lower case letter
+    // You can also give custom Bean ID using @Bean("IdName")
     @Bean
     public Coach swimCoach(){
         return new SwimCoach();
