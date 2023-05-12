@@ -1,1 +1,1 @@
-03-spring-hiernate-jpa-crud
+03-spring-hibernate-jpa-crud
