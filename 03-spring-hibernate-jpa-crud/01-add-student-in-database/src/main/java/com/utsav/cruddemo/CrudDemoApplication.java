@@ -19,9 +19,31 @@ public class CrudDemoApplication {
 	public CommandLineRunner commandLineRunner(StudentDAO studentDAO){
 		// Use java lambda expression
 		return runner -> {
-			createStudent(studentDAO);
+			// create one student object
+			//createStudent(studentDAO);
+			
+			//create multiple student object
+			createMultipleStudents(studentDAO);
+			
 		};
 	}
+	
+	private void createMultipleStudents(StudentDAO studentDAO) {
+		
+		//create multiple students
+		System.out.println("Creating 3 new student objects....");
+		Student tempStudent1 = new Student("utsav","Katharotiya","utsav@gmail.com");
+		Student tempStudent2 = new Student("deep","patel","deep@gmail.com");
+		Student tempStudent3 = new Student("jainam","jain","jainam@gmail.com");
+		
+		// save the student objects
+		System.out.println("Saving the students....");
+		studentDAO.save(tempStudent1);
+		studentDAO.save(tempStudent2);
+		studentDAO.save(tempStudent3);
+
+	}
+
 
 	private void createStudent(StudentDAO studentDAO) {
 		// create the student object
